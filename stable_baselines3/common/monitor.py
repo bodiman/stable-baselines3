@@ -113,7 +113,7 @@ class Monitor(gym.Wrapper):
             return observation, reward, done, info
         
         except:
-            return self.env.state, 0, false, {}
+            return self.env.state, 0, False, {}
 
     def close(self) -> None:
         """
