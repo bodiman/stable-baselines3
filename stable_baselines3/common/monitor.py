@@ -116,7 +116,8 @@ class Monitor(gym.Wrapper):
         
         except:
             print("errored")
-            return self.env.state, 0, False, {}
+            newstate = self.env.reset()
+            return newstate, 0, False, {}
 
     def close(self) -> None:
         """
