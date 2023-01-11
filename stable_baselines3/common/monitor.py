@@ -115,7 +115,6 @@ class Monitor(gym.Wrapper):
             return observation, reward, done, info
         
         except:
-            print("errored")
             newstate = self.env.reset()
             return newstate, 0, False, {}
 
